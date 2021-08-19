@@ -1,4 +1,5 @@
 import Home from './HomeScreen'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
