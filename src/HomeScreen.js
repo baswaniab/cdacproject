@@ -8,7 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Home=()=>{
     return <React.Fragment>
+
         <Navbar {...projectProfile}/> 
+
 
 
     </React.Fragment>
