@@ -6,10 +6,7 @@ import './HomeScreen.css'
 const Home=()=>{
     return <React.Fragment>
         <Navbar {...project}/>
-        <h1>Isdjhask</h1> 
-<h3>
-    hi hlooooooo
-</h3>
+
 
     </React.Fragment>
 }
