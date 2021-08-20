@@ -15,7 +15,7 @@ const Home=()=>{
                 <Carousel/>
             </div>
         </div>
-
+        <h1> hii </h1>
 
 
     </React.Fragment>
