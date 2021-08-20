@@ -1,0 +1,32 @@
+
+why gitlab?
+common code work space for our project all our individual works are dumped together as we progress
+
+
+git init 	/*to initialaize git in your local work space */
+
+
+git clone https://gitlab.com/cdac-project3/home-chef.git 	/* to clone the repository from gitlab to local work space (vs code)*/
+ 		*note use this command only once initially
+
+change directory to home-chef
+
+/*follow the following steps to work and modify the project*/
+
+git init
+
+git pull origin master /*if you use clone command dont use this command*/
+			/* every time you work on project use this command to download changes made by others*/ 
+
+/*make your changes in local files */
+
+git add . 	/*to make commit use this code after this only you can commit the code*/ 
+
+
+git commit -m 'your message' 	/*to commit changes in local repositiory*/
+
+
+git pull origin master --rebase		/* make sure you use this command before you push in git lab*/
+
+
+git push origin master 		/* to make changes in gitlab repository*/
