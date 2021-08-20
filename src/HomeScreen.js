@@ -11,7 +11,7 @@ const Home=()=>{
 
         <Navbar {...projectProfile}/> 
 
-
+<h1>hi</h1>
 
     </React.Fragment>
 }
