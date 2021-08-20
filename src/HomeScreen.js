@@ -10,6 +10,7 @@ const Home=()=>{
     return <React.Fragment>
 
         <Navbar {...projectProfile}/> 
+        <h1>helloo</h1>
 
     </React.Fragment>
 }
