@@ -10,7 +10,11 @@ const Home=()=>{
     return <React.Fragment>
 
         <Navbar {...projectProfile}/> 
-        <h1>helloo</h1>
+        <div className="slide">
+            <div className="container carousel">
+                <Carousel/>
+            </div>
+        </div>
 
     </React.Fragment>
 }
@@ -77,11 +81,7 @@ const Navbar=({title})=>{
                     <span className='clear' onClick={clear}></span>
                 </div>
             </div> */}
-        <div className="slide">
-            <div className="container carousel">
-                <Carousel/>
-            </div>
-        </div>
+        
     
     </>
 }
