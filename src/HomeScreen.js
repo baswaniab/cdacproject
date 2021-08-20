@@ -16,6 +16,9 @@ const Home=()=>{
             </div>
         </div>
 
+<h1>hi</h1>
+<h2>hloo</h2>
+
     </React.Fragment>
 }
 
