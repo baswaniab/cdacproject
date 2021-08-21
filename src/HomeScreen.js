@@ -1,25 +1,28 @@
-import React from 'react';
-import {projectProfile,images} from './data';
+import React, { Component } from 'react';
+import {projectProfile,kitchen} from './data';
 import logo from './logo.png';
 import './HomeScreen.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Home=()=>{
-    return <React.Fragment>
+class Home extends Component{
+    render() {
+        return  <React.Fragment>
 
         <Navbar {...projectProfile}/> 
         <div className="slide">
             <div className="container carousel">
-                <Carousel/>
+                <Carousel />
             </div>
-        </div>
-        
-
-
-    </React.Fragment>
+        </div>    
+        </React.Fragment>
+    }
 }
+// const Home=()=>{
+  
+// }
 
 
 
@@ -34,11 +37,6 @@ const Navbar=({title})=>{
             input.classList.toggle('hide');
         }
         const clear=document.querySelector('.clear');
-    //     clear=()=>{
-    //     console.log('called');
-    //     document.getElementById('search').value='';
-    //     console.log('delelte');
-    // }
         clear.onclick=()=>{
          document.getElementById('search').value='';
         }
@@ -98,11 +96,11 @@ const Carousel =()=>{
         cssEase: "linear"
     }
     return <Slider {...settings}>
-        {images.map(item=>{
-            return <div className="card-wrapper">
+        {kitchen.map(item=>{
+            return <div className="card-wrapper" key={item.id}>
                 <div className="card" >
                     <div className="card-image">
-                        <img src={item} alt="" style={{width:"100%",height:"290px"}}/>
+                        <img src={item.image} alt="" style={{width:"100%",height:"290px"}}/>
                     </div>
                 </div>
             </div>
