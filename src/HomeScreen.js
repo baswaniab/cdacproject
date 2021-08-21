@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {projectProfile,images} from './data';
 import logo from './logo.png';
 import './HomeScreen.css'
@@ -6,20 +6,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Home=()=>{
-    return <React.Fragment>
+class Home extends Component{
+    render() {
+        return  <React.Fragment>
 
         <Navbar {...projectProfile}/> 
         <div className="slide">
             <div className="container carousel">
                 <Carousel/>
             </div>
-        </div>
-
-
-
-    </React.Fragment>
+        </div>    
+        </React.Fragment>
+    }
 }
+// const Home=()=>{
+  
+// }
 
 
 
