@@ -2,7 +2,7 @@ const projectProfile={
     title :'Home Chef'
 }
 
-const kitchen=[{
+const kitchenProfile=[{
     id:1,
     image:`https://media.architecturaldigest.com/photos/60a6a478ced6797772f44d7a/3:2/w_1599,h_1066,c_limit/20191011-DSC_7759-Edit_HI_RES.jpeg`
 },
@@ -31,4 +31,4 @@ const kitchen=[{
 // `https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ph163819-priority-1580934887.jpg?crop=1xw:0.7961783439490446xh;center,top&resize=1200:*`,
 // `https://images.unsplash.com/photo-1556911220-bff31c812dba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80`]
 
-export  {projectProfile,kitchen};
+export  {projectProfile,kitchenProfile};
