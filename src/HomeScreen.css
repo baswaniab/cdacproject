@@ -19,4 +19,22 @@ body {
   margin: 0;
   list-style: none;
   text-align: center;
+  background-color: #ecedf3;
+}
+.slick-slider.slick-initialized {
+  background-color: #ecedf3;
+}
+.carousel {
+  position: relative;
+  background-color: #ecedf3;
+}
+.slick-initialized .slick-slide {
+  display: block;
+  background-color: #ecedf3;
+}
+.card-wrapper {
+  background-color: #ecedf3;
+}
+.slick-dots li {
+  background-color: #ecedf3;
 }

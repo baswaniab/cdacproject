@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import {useGlobalContext} from './context'
+import './kitchenview.css'
 
 export default function Kitchen(){
     const {id}=useParams();
@@ -20,5 +21,26 @@ export default function Kitchen(){
 const KitchenComponent=(props)=>{
     const kitchenDetails=props.kitchen;
     console.log(kitchenDetails);
-    return <img src={kitchenDetails.image} alt="" style={{width:"100%",height:"290px"}}></img>
+    return <>
+    <div className="container-fluid">
+        <div className='row '>
+            <div className="col-md-3 kitchen-detail"></div>
+            <div className="col-md-8 px-5" >
+                <div className="row justify-content-center">
+                    <div className="col-md-5 kitchen-image">
+                        <div className="card">
+                            <img src={kitchenDetails.image} alt="" ></img>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12 menu">
+                        <h2>Menu</h2>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    
+    </>
 }

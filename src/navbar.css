@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 img#logo {
   width: 83px;
@@ -23,9 +24,11 @@ img#logo {
 h1#projecttitle {
   grid-column: 3/5;
   align-self: center;
+  background: transparent;
 }
 a {
   text-decoration: none;
+  background: transparent;
   color: black;
 }
 a:hover {
@@ -36,6 +39,7 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background: transparent;
 }
 
 .navsearch {
@@ -93,19 +97,22 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* cursor: pointer; */
+  background: transparent;
 }
 i.fa.fa-user-o {
   font-size: 22px;
   cursor: pointer;
+  background: transparent;
 }
 .cart {
   grid-column: 11/13;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 i.fa.fa-shopping-cart {
   font-size: 22px;
   cursor: pointer;
+  background: transparent;
 }
