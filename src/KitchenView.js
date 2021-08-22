@@ -18,14 +18,48 @@ export default function Kitchen(){
     }
 }
 
+
+
+
 const KitchenComponent=(props)=>{
     const kitchenDetails=props.kitchen;
-    console.log(kitchenDetails);
+    const [menuItems,setMenuItems]=React.useState(kitchenDetails.menu);
+    
+    const [categories,setCategories]=React.useState([]);
+    let allCategories=[];
+    let categoryList=[];
+    kitchenDetails.menu.forEach((item)=>{
+        item.foodPeriod.forEach((category)=>categoryList.push(category))
+    })
+    allCategories=['all',...new Set(categoryList)];
+    
+    React.useEffect(()=>{        
+        
+        setCategories(allCategories);
+        // eslint-disable-next-line
+    },[])
+    const filterItems=(category)=>{
+        if(category==='all'){
+            setMenuItems(kitchenDetails.menu);
+            return;
+        }
+        let newItems=[];
+        kitchenDetails.menu.forEach((item)=>{
+            item.foodPeriod.forEach((period)=>{
+                if(period===category){
+                    newItems.push(item)
+                }
+            })
+            setMenuItems(newItems)
+        })
+        
+    }
     return <>
     <div className="container-fluid">
         <div className='row '>
             <div className="col-md-3 kitchen-detail">
                 <h3>{kitchenDetails.kitchenName}</h3>
+                <Category categories={categories} filterItems={filterItems}/>
             </div>
             <div className="col-md-8 px-5 kitchen-content" >
                 <div className="row justify-content-center">
@@ -40,7 +74,7 @@ const KitchenComponent=(props)=>{
                         <h2>Menu</h2>
                     </div>
                     <div className="col-md-12">
-                        <MenuList {...props}/>
+                        <MenuList items={menuItems}/>
                     </div>
                 </div>               
             </div>
@@ -50,11 +84,11 @@ const KitchenComponent=(props)=>{
     </>
 }
 
-const MenuList=(props)=>{
-    const kitchenDetails=props.kitchen;
+const MenuList=({items})=>{
+    // const kitchenDetails=props.kitchen;
 
     return <>
-    {kitchenDetails.menu.map((item)=>{
+    {items.map((item)=>{
         return<React.Fragment key={item.foodId}>
             <div className="menu-list">
                 <div className="row">
@@ -87,4 +121,20 @@ const MenuList=(props)=>{
         </React.Fragment> 
     })}
     </>
+}
+
+const Category=({categories,filterItems})=>{
+    return <div>
+        {categories.map((category,index)=>{
+            return (
+                <button
+                  className="btn btn-primary"
+                  key={index}
+                  onClick={()=>filterItems(category)}
+                  >
+                      {category}
+                  </button>
+            );
+        })}
+    </div>
 }
