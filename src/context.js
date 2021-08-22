@@ -7,10 +7,13 @@ const AppProvider = ({children})=>{
     const [kitchen,setKitchen]=useState([]);
     const getDetails=()=>{
         const kitchenDetails=kitchenProfile.map((item)=>{
-            const {id,image}=item;
+            const {id,image,kitchenName,chefName,menu}=item;
             return {
                 id:id,
-                image:image
+                image:image,
+                kitchenName:kitchenName,
+                chefName:chefName,
+                menu:menu
             }
         })
         setKitchen(kitchenDetails);

@@ -5,6 +5,7 @@
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: 100px;
   background-color: #dc143c;
+  z-index: 100;
   /* background-color: #ff5b5b; */
   /* background-color: #06315F; */
 }

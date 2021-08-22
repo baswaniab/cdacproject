@@ -4,7 +4,10 @@
 .menu {
   border-bottom: 1px solid;
 }
-.kitchen-detail {
-  height: 86vh;
-  border-right: 1px solid;
+.kitchen-content {
+  border-left: 1px solid;
+}
+.menu-list {
+  padding: 35px;
+  border-bottom: 1px solid #e5e5e5;
 }
