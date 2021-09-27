@@ -1,0 +1,62 @@
+.body-cart {
+  background-color: rgb(238, 252, 252);
+  height: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.money-right {
+  float: right;
+}
+
+.box-beauty {
+  padding: 0.6cm;
+}
+
+.grand-total {
+  color: black;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.address-regularing {
+  width: 2.3cm;
+  text-align: right;
+}
+
+.address-right {
+  text-align: right;
+}
+
+.change-address-border {
+  background-color: rgb(253, 237, 236);
+  border: rgb(121, 118, 118) solid;
+  border-radius: 7pt;
+  margin-left: 20px;
+  margin-right: 1cm;
+  padding-bottom: 3px;
+  padding-right: 3px;
+}
+
+.change-address-button {
+  border-color: crimson;
+  font-weight: bold;
+  color: crimson;
+  border-style: solid;
+  border-radius: 7px;
+  float: right;
+  width: 4cm;
+}
+
+.change-address-button:hover {
+  background-color: crimson;
+  color: rgb(248, 242, 242);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 18px;
+}

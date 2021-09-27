@@ -59,6 +59,7 @@ const KitchenComponent=(props)=>{
         <div className='row '>
             <div className="col-md-3 kitchen-detail">
                 <h3>{kitchenDetails.kitchenName}</h3>
+                <h4>{kitchenDetails.chefName}</h4>
                 <Category categories={categories} filterItems={filterItems}/>
             </div>
             <div className="col-md-8 px-5 kitchen-content" >
@@ -107,19 +108,26 @@ const MenuList=({items})=>{
                                         }
                                     })()}
                                 </h4>
+                                 
                             </div>
+                            
                             <div className="col-md-12">
                                 <h5>Rs.&nbsp;{item.foodPrice}</h5>
                             </div>
-                        </div>
-                        
+                            <div className="col-md-1">
+                        <input type="number" name="quantity" min="0"></input>
                     </div>
+                        </div>
+                        <button className="col-md-2 offset-10 btn btn-warning">Add Cart</button>
+                    </div>
+                    
                 </div>
-               
-            </div>
+              
+            </div>            
            
         </React.Fragment> 
     })}
+    
     </>
 }
 

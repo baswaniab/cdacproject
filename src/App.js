@@ -13,6 +13,9 @@ import Login from './login';
 import UserInfo from './userinfo';
 import ChefInfo from './personalinfo';
 import ForgetPassword from './forgot.component';
+import Cart from './cart';
+import Payment from './orders'
+import Menu from './listMenuContent';
 
 
 function App() {
@@ -44,9 +47,21 @@ function App() {
           <Navbar />
           <DeleteMenu/>
         </Route>
+        <Route path ="/chef/menuitem" >
+          <Navbar />
+          <Menu/>
+        </Route>
         <Route path ="/login" >
           <SideNav/>
           <Login/>
+        </Route>
+        <Route exact path ="/cart" >
+          <Navbar/>
+          <Cart/>
+        </Route>
+        <Route path ="/cart/payment" >
+          <Navbar/>
+          <Payment/>
         </Route>
         <Route path ="/registration/user" >
           <SideNav/>

@@ -23,6 +23,9 @@ export default function Navbar(){
     const handleSigin=(event)=>{
         history.push('/login')
     } 
+    const handleCart=(event)=>{
+        history.push('/cart')
+    } 
     
     return <>
         <div id="navbar">
@@ -55,7 +58,7 @@ export default function Navbar(){
                 <i className="fa fa-user-o" onClick={handleSigin} >&nbsp; Sign-in</i>
             </div>
             <div className="cart">
-                <i className="fa fa-shopping-cart" >&nbsp; Cart</i>
+                <i className="fa fa-shopping-cart" onClick={handleCart} >&nbsp; Cart</i>
             </div>
             
             

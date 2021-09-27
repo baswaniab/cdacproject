@@ -56,19 +56,19 @@ export default class updatemenu extends Component
                 <form onSubmit={this.submitted}> 
                  
                 {/* <div className="name"> */}
-                <div className="form-group row offset-2">
+                <div className="form-group row">
                 <label className="labelp col-sm-2 col-form-label"> Food ID  </label>
                 <div className="col-sm-5 ">
                 <input type="text" name="foodId" value = {this.state.foodId} onChange = {this.cfoodId} className = "ip form-control" required></input> <br/>
                 </div>
                 </div>
-                <div className="form-group row offset-2">
+                <div className="form-group row">
                 <label className="labelp col-sm-2 col-form-label"> Food Name  </label>
                 <div className="col-sm-5 ">
                 <input type="text" name="foodname" value = {this.state.foodname} onChange = {this.cfoodname} className = "ip form-control" required></input> <br/>
                 </div>
                 </div>
-                <div className="form-group row offset-2">  
+                <div className="form-group row ">  
                 <label className="labelp col-sm-2 col-form-label"> Food Type  </label>
                 <div className="col-sm-5 ">
                 <select className = "ip selectarea form-control" name = " foodtype"  value = {this.state.foodtype} required  onChange = {this.cfoodtype}>
@@ -77,13 +77,13 @@ export default class updatemenu extends Component
                     </select><br/>
                 </div>
                 </div>
-                <div className="form-group row offset-2">
+                <div className="form-group row">
                 <label className="labelp col-sm-2 col-form-label"> Food Period  </label>
                 <div className="col-sm-5 ">
                 <input type="text" name="foodperiod" value = {this.state.foodperiod} onChange = {this.cfoodperiod} className = "ip form-control" required></input> <br/>
                 </div>
                 </div>
-                <div className="form-group row offset-2">  
+                <div className="form-group row">  
                 <label className="labelp col-sm-2 col-form-label"> Food Price </label>
                 <div className="col-sm-5 ">
                 <input type="text" name="foodprice" value = {this.state.foodprice} onChange = {this.cfoodprice} className = "ip form-control" required></input> <br/>
