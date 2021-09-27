@@ -1,11 +1,12 @@
 import React from "react";
 import {projectProfile} from './data';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import logo from './logo.png';
 import './navbar.css'
 
 export default function Navbar(){
     const {title}=projectProfile
+    const history=useHistory();
     window.onload=()=>{
         const icon=document.querySelector('.searchicon');
         const search=document.querySelector('.navsearch');
@@ -19,7 +20,9 @@ export default function Navbar(){
          document.getElementById('search').value='';
         }
     }
-     
+    const handleSigin=(event)=>{
+        history.push('/login')
+    } 
     
     return <>
         <div id="navbar">
@@ -49,7 +52,7 @@ export default function Navbar(){
                 </div>
             </div>
             <div className="user">
-                <i className="fa fa-user-o" >&nbsp; Sign-in</i>
+                <i className="fa fa-user-o" onClick={handleSigin} >&nbsp; Sign-in</i>
             </div>
             <div className="cart">
                 <i className="fa fa-shopping-cart" >&nbsp; Cart</i>

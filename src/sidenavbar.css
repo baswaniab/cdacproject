@@ -1,0 +1,33 @@
+.side-nav {
+  position: fixed;
+  height: 100vh;
+  padding-top: 1cm;
+  /* background-color: rgb(214, 37, 72); */
+  background-image: linear-gradient(to right, rgb(226, 52, 87),crimson);
+  width: 14rem;
+}
+
+.links {
+  text-align: start;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    padding: 29px;
+}
+
+.active {
+  color: rgb(246, 248, 248);
+  /* background-color: rgb(253, 242, 241); */
+}
+
+.links:hover {
+  color: crimson;
+  background-color: rgb(238, 252, 252);
+}
+
+.disp {
+  display: inline;
+  float: right;
+}
