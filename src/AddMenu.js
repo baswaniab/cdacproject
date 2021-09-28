@@ -22,7 +22,7 @@ export default function AddItem (){
         // }
         // setMenuItem(menu);
         console.log(menuItem)
-         axios.post("http://localhost:8080/chef/additem", menuItem)
+         axios.post("http://localhost:8099/menu/menusave", menuItem)
         .then(response => {
                 console.log('servercalled');
             })
@@ -93,6 +93,13 @@ export default function AddItem (){
                     <label htmlFor="foodPrice" className="col-sm-2 col-form-label">Food Price</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" name="foodPrice" id="foodprice" onChange={onChange} />
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="foodPrice" className="col-sm-2 col-form-label">Chef ID</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" name="chefId" id="foodprice" onChange={onChange} />
                     </div>
                 </div>
 

@@ -25,17 +25,17 @@ export default class Login extends React.Component
      console.log(this.state);
 
      var id;
-     axios.post("http://localhost:8099", this.state)
+     axios.post("http://localhost:8099/login", this.state)
      .then(response=> {
           id = response.data;
 
         if(id == 1)
         {
            ///returning to home page
-           useHistory.history.push('/login')
            let a = document.getElementById("errormsg");
            a.textContent= "correct Email or Password user";
            a.style.color = "green";
+           window.location = "/";
         }
         else if(id == 2)
         {
@@ -44,6 +44,7 @@ export default class Login extends React.Component
            let a = document.getElementById("errormsg");
            a.textContent= "correct Email or Password chef";
            a.style.color = "green";
+            window.location = "chef";
         }
         else if (id == 0){
            let a = document.getElementById("errormsg");

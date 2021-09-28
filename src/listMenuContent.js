@@ -22,7 +22,7 @@ export default class ListMenuContent extends Component
          eve.preventDefault(); 
           console.log(this.state);
 
-         axios.post("http://localhost:8099/form/listMenuContent" , this.state)
+         axios.post("http://localhost:8099/menu/listMenuContent" , this.state)
         .then((res) => {
             console.log(this.state.chefId);
             this.setState({ Menuitem: res.data});
@@ -35,7 +35,7 @@ export default class ListMenuContent extends Component
         return (
             <div>
                  <h2 className="text-center"> Menu List </h2>
-                 <form method ="get" onSubmit={this.handleSubmit}>
+                 <form method ="post" onSubmit={this.handleSubmit}>
                   <input type="text" inputMode="numeric" name="chefId" onChange={this.handleChange}/>
                   
                    <div className = "row">
@@ -43,7 +43,7 @@ export default class ListMenuContent extends Component
                             <thead>
                                 <tr>
                                     <th> Food Name</th>
-                                    <th> FoodType</th>
+                                    <th> Food Type</th>
                                     <th> Food period</th>
                                     <th> Food Price</th>
                                     <th> Chef ID</th>

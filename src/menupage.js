@@ -7,17 +7,17 @@ export default class menupage extends Component
     constructor(props) {
         super(props)
         this.state = {
-            foodname: '',
-            foodtype: '',
-            foodperiod: '',
-            foodprice: '',
+            foodName: '',
+            foodType: '',
+            foodPeriod: '',
+            foodPrice: '',
             chefId: '',
         }
     }
-    cfoodname = (event) => {  this.setState ( {foodname: event.target.value} ) }
-    cfoodtype = (event) => { this.setState ( { foodtype: event.target.value} ) }
-    cfoodperiod = (event) => { this.setState ( { foodperiod: event.target.value} ) }
-    cfoodprice = (event) => { this.setState ( { foodprice: event.target.value} ) }
+    cfoodName = (event) => {  this.setState ( {foodName: event.target.value} ) }
+    cfoodType = (event) => { this.setState ( { foodType: event.target.value} ) }
+    cfoodPeriod = (event) => { this.setState ( { foodPeriod: event.target.value} ) }
+    cfoodPrice = (event) => { this.setState ( { foodPrice: event.target.value} ) }
     cchefId = (event) => { this.setState ( { chefId: event.target.value} ) }
 
 
@@ -25,23 +25,24 @@ export default class menupage extends Component
 
         saveuser = (eve) => { 
             eve.preventDefault();
-            fetch("http://localhost:8080/api/menu",
+            fetch("http://localhost:8099/menu/menusave",
             {   
                 method:"POST",
                 
                 
                  headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({
-                    Foodname: this.state.foodname,
-                    Foodtype: this.state.foodtype,
-                    Foodperiod: this.state.foodperiod,
-                    Foodprice: this.state.foodprice,
-                    Chefid: this.state.chefId,
+                    foodName: this.state.foodName,
+                    foodType: this.state.foodType,
+                    foodPeriod: this.state.foodPeriod,
+                    foodPrice: this.state.foodPrice,
+                    chefId: this.state.chefId,
                 }
                 )
                  
     
             }).then(()=>{
+                // console.log(body);
                 console.log("Menu Updated")
             })
         }
@@ -59,28 +60,29 @@ export default class menupage extends Component
                 {/* <div className="name"> */}
                 <label className="labelp col-sm-2 col-form-label "> Food Name  </label>
                 <div className="col-sm-5 ">
-                <input type="text" name="foodname" value = {this.state.foodname} onChange = {this.cfoodname} className = "ip form-control" required></input><br/>
+                <input type="text" name="foodName" value = {this.state.foodName} onChange = {this.cfoodName} className = "ip form-control" required></input><br/>
                 </div>
                 </div> 
                 <div className="form-group row">  
                 <label className="labelp col-sm-2 col-form-label"> Food Type  </label>
                 <div className="col-sm-5 ">
-                <select className = "ip selectarea form-control" name = " foodtype" value = {this.state.foodtype} required  onChange = {this.cfoodtype}>
-                    <option value='veg'> Veg</option>
-                    <option value = 'Non-Veg' >Non-veg</option>
+                <select className = "ip selectarea form-control" name = " foodType" value = {this.state.foodType} required  onChange = {this.cfoodType}>
+                     <option value='' selected disabled> select</option>
+                    <option value="veg"> Veg</option>
+                    <option value = "non-veg"> Non-veg</option>
                 </select><br/>
                 </div>
                 </div>
                 <div className="form-group row">  
                 <label className="labelp col-sm-2 col-form-label"> Food Period  </label>
                 <div className="col-sm-5 ">
-                <input type="text" name="foodperiod" value = {this.state.foodperiod} onChange = {this.cfoodperiod} className = "ip form-control" required></input> <br/>
+                <input type="text" name="foodPeriod" value = {this.state.foodPeriod} onChange = {this.cfoodPeriod} className = "ip form-control" required></input> <br/>
                 </div>
                 </div>
                 <div className="form-group row">  
                 <label className="labelp col-sm-2 col-form-label"> Food Price </label>
                 <div className="col-sm-5 ">
-                <input type="text" name="foodprice" value = {this.state.foodprice} onChange = {this.cfoodprice} className = "ip form-control" required></input> <br/>
+                <input type="text" name="foodPrice" value = {this.state.foodPrice} onChange = {this.cfoodPrice} className = "ip form-control" required></input> <br/>
                 </div>
                 </div>
                 <div className="form-group row">  
